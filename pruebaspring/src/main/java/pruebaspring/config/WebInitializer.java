@@ -1,10 +1,6 @@
 package pruebaspring.config;
 
-import org.springframework.context.annotation.ComponentScan.Filter;
-import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
-import com.opensymphony.sitemesh.webapp.SiteMeshFilter;
 
 public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer{
 
@@ -16,13 +12,12 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Class<?>[] { RootConfig.class };
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		// TODO Auto-generated method stub
+		// Especificar clase de configuracion
 		return new Class<?>[] { WebConfig.class };
 	}
 }
